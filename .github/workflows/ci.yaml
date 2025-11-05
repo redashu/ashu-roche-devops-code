@@ -1,0 +1,21 @@
+name: ashuothshh job 
+# trigger point 
+on:
+  push:
+    branches: [ "dryrun-aws" ]
+    paths-ignore:
+      - "README.md"
+      - "terraform.tfstate"
+
+# creating jobs 
+jobs:
+  test-job:
+    runs-on: ubuntu-latest 
+    steps: # what exactly you want to run in ubuntu machine 
+    - name: my first step to test github action 
+      run: |
+        echo "Hello world"
+        git version 
+        whoami
+        ls -a 
+  
