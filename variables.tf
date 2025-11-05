@@ -19,3 +19,13 @@ variable "vm-size" {
 variable "ec2-key-name" {
   type = string
 }
+
+variable "private-key-algo" {
+    type = string
+  
+}
+
+variable "key-size" {
+    type = number
+  
+}
