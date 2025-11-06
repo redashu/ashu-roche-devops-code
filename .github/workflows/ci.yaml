@@ -49,6 +49,7 @@ jobs:
         terraform apply --auto-approve 
 
   infra-destroy-job:
+    needs: infra-provision-job
     runs-on: ubuntu-latest
     steps:
     - name: checking out code 
