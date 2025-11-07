@@ -87,6 +87,13 @@ jobs:
         sudo apt install ansible -y 
         ansible --version 
 
+    - name: running ansible playbook in dynamic inventory 
+      run: | 
+        echo "Running ansible playbook"
+        chmod 400 ashutoshh-key.pem
+        cd my-ansible
+        ansible-playbook -i ../ansible-inventory.txt --private-key ../ashutoshh-key.pem playbook1.yaml
+
     
 
 

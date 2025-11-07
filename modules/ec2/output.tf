@@ -14,7 +14,7 @@ output "my-ec2ID" {
 # storing data in local system 
 
 resource "local_file" "ashu-data" {
-  content  = join("\n",aws_instance.example[*].public_ip)
+  content  = "[ashu-roche]\n${join("\n", aws_instance.example[*].public_ip)}"
   filename = "${path.module}/ansible-inventory.txt"
   # making manual dependency 
   depends_on = [ aws_instance.example ]
