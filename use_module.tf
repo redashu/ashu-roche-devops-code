@@ -26,9 +26,9 @@ provider "aws" {
 module "my-ashutoshh-module-ec2" {
     source = "./modules/ec2"
     ashu-ami-id = "ami-0a25a306450a2cba3"
-    vm-name = "ashutoshh-vmby-module"
+    vm-name = "ashutoshh-vmby-module-dayfinal"
     vm-size = "t2.nano"
-    ec2-key-name = "ashukeyby-mode"
+    ec2-key-name = "ashukeyby-modedayfinal"
     private-key-algo = "RSA"
     key-size = 4096
     my-vpc-id = "vpc-02d56e9aa1ce2f114"

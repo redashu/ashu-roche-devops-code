@@ -12,6 +12,7 @@ resource "local_file" "private-key-data" {
     # path.modules mean where we are writting terraform tf file 
     filename = "${path.module}/ashutoshh-key.pem"
     file_permission = 0400
+    depends_on = [ tls_private_key.example ]
   
 }
 
@@ -20,5 +21,6 @@ resource "local_file" "private-key-data" {
 resource "aws_key_pair" "example" {
     public_key = tls_private_key.example.public_key_openssh
     key_name = var.ec2-key-name
+    depends_on = [ tls_private_key.example ]
   
 }
