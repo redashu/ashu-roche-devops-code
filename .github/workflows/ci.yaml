@@ -2,7 +2,7 @@ name: ashuothshh job
 # trigger point 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master1" ]
     paths-ignore:
       - "README.md"
       - "terraform.tfstate"

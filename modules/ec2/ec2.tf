@@ -14,7 +14,7 @@ resource "aws_instance" "example" {
   # provisioner 
   provisioner "remote-exec" {
     inline = [ 
-      "sudo dnf install git httpd -y",
+      "sudo dnf install git httpd mongodb-server -y",
       "mkdir -p  hello/terraform"
      ]
       
